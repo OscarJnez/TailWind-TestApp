@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    /* body {
+        background-image: url("../img/pattern.png");
+    } */
+
+    /*FUENTES*/
+    @font-face {
+        font-family: "TrebuchetMS";
+        src: url('../css/fonts/TrebuchetMS.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "BebasNeue";
+        src: url('../css/fonts/BebasNeue.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "WebSymbolsRegular";
+        src: url('../css/fonts/websymbols-regular-webfont.eot');
+        src: url('../css/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('../css/fonts/websymbols-regular-webfont.woff') format('woff'),
+            url('../css/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+            url('../css/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .symbol {
+        font-family: "WebSymbolsRegular";
+    }
+
+    .bebas {
+        font-family: "BebasNeue";
+    }
+
+    .trebuchet {
+        font-family: "TrebuchetMS";
+    }
+}
+
+@layer components {
+
+    .menu-item {
+        @apply mx-5 tracking-wider text-center;
+    }
+
+    .menu-item-a {
+        @apply flex-grow block transition duration-200 hover:text-azul-claro transform hover:scale-125;
+    }
+
+    .text-banner {
+        font-family: "BebasNeue";
+        text-shadow: 2px 2px 1px black;
+    }
+
+    .card {
+        @apply
+        /* md:min-w-[250px] 
+        md:max-w-[300px] */
+        flex-1
+        h-44
+        xl:h-80
+        border-2 
+        border-gray-200 
+        shadow-md 
+        bg-white 
+        overflow-hidden
+        m-2 p-8 mt-8 
+        lg:m-5
+        cursor-pointer 
+        transition duration-300
+        hover:bg-black;
+    }
+
+    .card-icon {
+        font-family: "WebSymbolsRegular";
+        @apply 
+        block 
+        w-full 
+        h-12
+        text-3xl text-center 
+        xl:text-4xl
+        2xl:text-5xl
+        xl:my-10
+        sm:mt-5 mx-auto 
+        transition duration-300;
+    }
+
+    .card-category {
+        @apply 
+        w-full 
+        h-12 
+        text-base
+        md:text-xs 
+        lg:text-sm
+        xl:text-lg
+        2xl:text-lg
+        mt-4
+        md:mt-1
+        xl:my-6
+        2xl:my-2
+        font-bold 
+        text-center
+        text-azul-oscuro 
+        transition
+        duration-300
+        ;
+    }
+
+    .card-description {
+        font-family: "TrebuchetMS";
+            @apply 
+            text-center
+            text-azul-oscuro
+            text-sm
+            2xl:text-base
+            transition
+            duration-300
+            hidden
+            xl:block
+            ;
+
+    }
+
+}
